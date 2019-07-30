@@ -1,6 +1,16 @@
 # react-ts-graphql-boilerplate
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prepare your editor
+
+### In VSCode (preferred) 
+Install TSLint extension
+
+### In SublimeText 3 
+Install following plugins and then restart your editor:
+* Sublime​Linter
+* Sublime​Linter-tslint
+
 ## Available Scripts
 
 In the project directory, you can run:
