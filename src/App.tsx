@@ -1,12 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
+import Hello from './components/statefulHello';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <Header/>
+      <Hello name="world"/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
