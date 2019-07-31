@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+a {
+  color: white !important;
+}
+a:link {
+  text-decoration: none !important;
+  color: white !important;
+}
+a:hover {
+  color: white;
+}
+.card {
+  display: inline-block !important;
+}
+.card-columns {
+  column-count: 3;
+}

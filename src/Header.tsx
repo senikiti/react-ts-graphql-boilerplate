@@ -1,11 +1,19 @@
 import * as React from 'react';
+import {Nav, NavItem}from 'reactstrap';
 
 interface IProps {
     name?: string;
 }
 
 const Header: React.FC<IProps> = (props: IProps) => (
-    <h1>Hello {props.name}, welcome to React and Typescript! </h1>
+    <Nav className="navbar navbar-dark bg-dark">
+        <NavItem>
+            <a className="navbar-brand">Home</a>
+        </NavItem>
+        <NavItem>
+            <a className="navbar-brand">Hello {props.name}</a>
+        </NavItem>
+    </Nav>
 )
 
 Header.defaultProps = {
