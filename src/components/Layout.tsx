@@ -3,6 +3,7 @@ import { Container, Nav, NavItem } from 'reactstrap';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import App from '../App';
 import Signin from './signin';
+import Signup from './signup';
 // import Cookie from "js-cookie";
 
 export interface PageProps {
@@ -16,31 +17,26 @@ class Layout extends React.Component<PageProps> {
 
   render() {
     return (
+      <div>
         <Router>
           <header>
             <Nav className="navbar navbar-dark bg-dark">
                 <NavItem>
-                    <Link to="/">
-                        <a className="navbar-brand">Home</a>
-                    </Link>
-                </NavItem>
-                <NavItem className="ml-auto">
-                    <Link to="/signin">
-                        <a className="nav-link">Sign In</a>
-                    </Link>
+                    <Link to="/" className="navbar-brand">Home</Link>
                 </NavItem>
                 <NavItem>
-                    <Link to="/signup">
-                        <a className="nav-link">Sign Up</a>
-                    </Link>
+                    <Link to="/signin" className="nav-link">Sign In</Link>
+                </NavItem>
+                <NavItem>
+                    <Link to="/signup" className="nav-link">Sign Up</Link>
                 </NavItem>
             </Nav>
           </header>
-          <Container>{this.props.children}</Container>
-
-          <Route path="/" component={App} />
-          <Route path="/signin" component={Signin} />
+          <Route exact path="/signin" component={Signin}/>
+          <Route exact path="/signup" component={Signup}/>
         </Router>
+        <Container>{this.props.children}</Container>
+      </div>
     );
   }
 }
