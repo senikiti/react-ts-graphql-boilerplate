@@ -1,13 +1,14 @@
 import * as React from 'react';
+import EnthusiasmProps from './enthusiasmProps';
 
-export interface Props {
-    name: string;
-    enthusiasmLevel?: number;
-}
-
-class Hello extends React.Component<Props, object> {
+class Hello extends React.Component<EnthusiasmProps, object> {
+    constructor(enthusiasmProps: EnthusiasmProps){
+      super(enthusiasmProps);
+      this.state = enthusiasmProps;
+    }
+    state: EnthusiasmProps;
     render() {
-      const { name, enthusiasmLevel = 1 } = this.props;
+      const { name, enthusiasmLevel = 1 } = this.state;
   
       if (enthusiasmLevel <= 0) {
         throw new Error('You could be a little more enthusiastic. :D');

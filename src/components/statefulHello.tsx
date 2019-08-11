@@ -15,6 +15,10 @@ class Hello extends React.Component<Props, State> {
     this.state = { currentEnthusiasm: props.enthusiasmLevel || 1 };
   }
 
+  componentWillUnmount() {
+    console.log("We unmount statefulHello here");
+  }
+
   onIncrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm + 1);
   onDecrement = () => this.updateEnthusiasm(this.state.currentEnthusiasm - 1);
 
